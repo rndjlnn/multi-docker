@@ -23,9 +23,9 @@ after_success:
     - docker push rndjlnn/multi-worker
 
 deploy:
+    # test
     edge: true
     provider: elasticbeanstalk
-<<<<<<< HEAD
     region: "us-east-2"
     app: "multi-docker"
     env: "MultiDocker-env"
@@ -34,15 +34,5 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: 
         secure: "$AWS_SECRET_KEY"
-=======
-    region: us-east-2
-    app: multi-docker
-    env: MultiDocker-env
-    bucket_name: arn:aws:s3:::elasticbeanstalk-us-east-2-665827257144
-    bucket_path: docker-multi
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: 
-        secure: $AWS_SECRET_KEY
->>>>>>> 4e4fcfe0b0cab61b31d7ddc875df5bd72578ad91
     on:
         branch: master
